@@ -1,0 +1,31 @@
+
+{% extends "layout.html"%}
+{% load static %}
+{% block title %}Project Detail{% endblock %}
+{% block head %}
+        <div class="head">
+            <h1>Position</h1>
+        </div>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <!-- กำหนด if และ for ให้ถูกต้อง -->
+        <div class="itemGroup">
+            {% for i in pos %}
+            <div class="item">
+                <!-- position id และ ชื่อตำแหน่ง -->
+                <div>{{i.id}}. {{i.name}}</div>
+
+                <!-- จำนวนพนักงานทั้งหมด -->
+                <div class="action">{{i.countpos}} People</div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </main>
+{% endblock %}
+{% block script %}
+
+{% endblock %}
+</html>
